@@ -13,4 +13,6 @@ public interface EmployeeService {
     Employee postEmployee(Employee employee);
 
     List<Employee> retrieveEmployees();
+
+    List<Employee> retrieveEmployeeByName(String name);
 }

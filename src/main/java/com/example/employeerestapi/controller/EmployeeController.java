@@ -25,6 +25,11 @@ public class EmployeeController {
         return eService.retrieveEmployees();
     }
 
+    @GetMapping("/employeeByFirstName")
+    public List<Employee> getEmployeeByFirstName(@RequestParam String fname){
+        return eService.retrieveEmployeeByName(fname);
+    }
+
     /*@PostMapping("/employees")
     public ResponseEntity<Employee> saveEmployee(@Valid @RequestBody Employee employee){
         return new ResponseEntity<>(eService.saveEmployee(employee), HttpStatus.CREATED);

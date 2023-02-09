@@ -23,4 +23,9 @@ public class EmployeeServiceImpl implements EmployeeService{
     public List<Employee> retrieveEmployees(){
         return eRepo.findAll();
     }
+
+    @Override
+    public List<Employee> retrieveEmployeeByName(String fname) {
+        return eRepo.findAllByFirstName(fname);
+    }
 }
